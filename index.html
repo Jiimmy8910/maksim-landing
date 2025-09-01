@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Президент Максим Діщук</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:Arial, sans-serif; background:#0d1b2a; color:#fff; overflow-x:hidden; scroll-behavior:smooth;}
+    header {position:fixed; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background:rgba(13,27,42,0.8); backdrop-filter:blur(10px); z-index:1000;}
+    header nav a {margin:0 15px; color:#fff; text-decoration:none; font-weight:bold; position:relative;}
+    header nav a::after {content:''; position:absolute; bottom:-5px; left:0; width:0; height:2px; background:#f4d35e; transition:0.3s;}
+    header nav a:hover::after {width:100%;}
+
+    section {min-height:100vh; display:flex; justify-content:center; align-items:center; padding:60px 20px; text-align:center;}
+    .hero {background:linear-gradient(135deg,#0d1b2a,#1b263b,#415a77); flex-direction:column;}
+    .hero h1 {font-size:3rem; margin-bottom:20px; animation:fadeIn 1.5s ease;}
+    .hero p {font-size:1.2rem; margin-bottom:30px; max-width:600px; animation:fadeInUp 2s ease;}
+    .btn {padding:12px 24px; margin:10px; border:none; border-radius:8px; font-size:1rem; cursor:pointer; transition:0.3s;}
+    .btn-primary {background:#f4d35e; color:#0d1b2a; font-weight:bold;}
+    .btn-primary:hover {box-shadow:0 0 15px #f4d35e;}
+    .btn-secondary {background:transparent; color:#f4d35e; border:2px solid #f4d35e;}
+    .btn-secondary:hover {background:#f4d35e; color:#0d1b2a;}
+
+    h2 {font-size:2.5rem; margin-bottom:20px;}
+    .content {max-width:700px; margin:auto; font-size:1.1rem; line-height:1.6;}
+
+    footer {background:#1b263b; padding:20px; text-align:center; font-size:0.9rem;}
+
+    input, textarea {width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none; font-size:1rem;}
+    form label {display:block; margin-top:10px; text-align:left;}
+
+    /* animations */
+    @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+    @keyframes fadeInUp {from{opacity:0; transform:translateY(40px);} to{opacity:1; transform:translateY(0);}}
+    .reveal {opacity:0; transform:translateY(50px); transition:all 1s ease;}
+    .reveal.active {opacity:1; transform:translateY(0);}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🇺🇦 Maksim</div>
+    <nav>
+      <a href="#about">Про мене</a>
+      <a href="#unity">Єдина країна</a>
+      <a href="#bigkraina">Bigkraina</a>
+      <a href="#policy">Політика</a>
+      <a href="#promises">Обіцянки</a>
+      <a href="#join">Задай питання</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Президент Максим Діщук</h1>
+    <p>Разом — сильні. Разом — для України. Смілива візія, чесні рішення та команда, яка працює для людей.</p>
+    <div>
+      <a href="#policy"><button class="btn btn-primary">Програма</button></a>
+      <a href="#join"><button class="btn btn-secondary">Долучитись</button></a>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <div>
+      <h2>Хто я?</h2>
+      <p class="content">Я Максим Діщук — громадянин, що вірить у майбутнє України. Моя мета — чесність, прозорість та сильна країна для кожного.</p>
+    </div>
+  </section>
+
+  <section id="unity" class="reveal" style="background:#1b263b;">
+    <div>
+      <h2>Єдина країна</h2>
+      <p class="content">Ми разом будуємо державу, яка єдина не лише територіально, а й духовно. Взаємна підтримка та солідарність — основа нашої сили.</p>
+    </div>
+  </section>
+
+  <section id="bigkraina" class="reveal">
+    <div>
+      <h2>Bigkraina</h2>
+      <p class="content">Проєкт об’єднання та розвитку — депутати, прем’єр-міністр та команда, що працює на благо народу.</p>
+    </div>
+  </section>
+
+  <section id="policy" class="reveal" style="background:#1b263b;">
+    <div>
+      <h2>Політика</h2>
+      <p class="content">Закони, які змінюють життя: від прозорих бюджетів до захисту малого бізнесу та сучасної оборони.</p>
+    </div>
+  </section>
+
+  <section id="promises" class="reveal">
+    <div>
+      <h2>Обіцянки</h2>
+      <p class="content">✔️ Справедливість і прозорість<br>✔️ Сильні інституції<br>✔️ Повага до людини</p>
+    </div>
+  </section>
+
+  <section id="join" class="reveal" style="background:#1b263b;">
+    <div>
+      <h2>Задай питання</h2>
+      <form action="https://formspree.io/f/ТВОЙ_ID" method="POST" style="max-width:500px; margin:auto; text-align:left;">
+        <label>Ім'я:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Питання:</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Надіслати</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Президент Максим Діщук. Всі права захищено.
+  </footer>
+
+  <script>
+    // reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for(let r of reveals){
+        const rect = r.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+          r.classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
